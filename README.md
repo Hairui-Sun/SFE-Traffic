@@ -16,18 +16,17 @@ First, clone the baseline repository:
 ```bash
 git clone [https://github.com/PlanckChang/Extralonger.git](https://github.com/PlanckChang/Extralonger.git)
 cd Extralonger
-Step 2: Download and Replace Files
+```
+### Step 2: Download and Replace Files
 Download the following files from this (SFE) repository:
 
 Extralonger_A.py
-
 train_A.py
-
 mask_pems04.npy (and/or other mask files, e.g., mask_pems08.npy)
 
 Now, replace the original files in the Extralonger directory:
 
-Bash
+```Bash
 
 # (Assuming downloaded files are in ../)
 # This replaces the model file:
@@ -36,11 +35,11 @@ mv ../Extralonger_A.py ./model.py
 # This replaces the training file:
 mv ../train_A.py ./train.py
 (Note: This assumes the original files are model.py and train.py. Adjust the destination filenames if the originals are named differently, e.g., main.py).
-
-Step 3: Place Mask File
+```
+### Step 3: Place Mask File
 Move the .npy mask files to a directory, for example, ./data/:
 
-Bash
+```Bash
 
 # (Assuming downloaded files are in ../)
 mv ../mask_pems04.npy ./data/
@@ -58,11 +57,11 @@ Python
 
 mask_path = r"data/mask_pems04.npy" 
 (Note: Adjust this path if you are using a different dataset, e.g., data/mask_pems08.npy)
-
-Step 5: Run
+```
+###Step 5: Run
 You can now run the patched training script (train.py, which is now your train_A.py).
 
-Bash
+```Bash
 
 # Install requirements from the original Extralonger repo first
 # pip install -r requirements.txt
