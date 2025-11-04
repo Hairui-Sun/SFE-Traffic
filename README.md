@@ -44,7 +44,7 @@ Move the .npy mask files to a directory, for example, ./data/:
 # (Assuming downloaded files are in ../)
 mv ../mask_pems04.npy ./data/
 ```
-Step 3: (CRITICAL) Edit Mask Path
+### Step 4: (CRITICAL) Edit Mask Path
 You must manually edit the model file (model.py, which is now your Extralonger_A.py) to point to the correct mask file path.
 
 Open model.py and find this line:
