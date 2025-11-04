@@ -52,11 +52,13 @@ Open model.py and find this line:
 ```Python
 
 # mask_path = r"F:\AI_Bulid\Traffic\..."
+```
 Change it to the correct relative path:
 
-Python
+```Python
 
-mask_path = r"data/mask_pems04.npy" 
+mask_path = r"data/mask_pems04.npy"
+```
 (Note: Adjust this path if you are using a different dataset, e.g., data/mask_pems08.npy)
 ```
 ### Step 5: Run
