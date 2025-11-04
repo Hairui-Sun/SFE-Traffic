@@ -2,7 +2,7 @@
 
 [![Paper DOI](https://img.shields.io/badge/DOI-10.1016/S1566--2535(25)00965--0-blue)](https://authors.elsevier.com/sd/article/S1566-2535(25)00965-0)
 
-This repository provides the patch files to implement the paper: **"Awakening Sleep Nodes: Slack Feature Enhancement for Robust Long-Term Traffic Forecasting"** (Accepted by Information Fusion).
+This repository provides the patch files to implement the paper: **"Awakening Sleep Nodes: Slack Feature Enhancement for Robust Long-Term Traffic Forecasting"** .
 
 This patch demonstrates how to integrate **Slack Feature Enhancement (SFE)** into the Extralonger baseline.
 
@@ -43,12 +43,13 @@ Move the .npy mask files to a directory, for example, ./data/:
 
 # (Assuming downloaded files are in ../)
 mv ../mask_pems04.npy ./data/
-Step 4: (CRITICAL) Edit Mask Path
+```
+Step 3: (CRITICAL) Edit Mask Path
 You must manually edit the model file (model.py, which is now your Extralonger_A.py) to point to the correct mask file path.
 
 Open model.py and find this line:
 
-Python
+```Python
 
 # mask_path = r"F:\AI_Bulid\Traffic\..."
 Change it to the correct relative path:
@@ -58,7 +59,7 @@ Python
 mask_path = r"data/mask_pems04.npy" 
 (Note: Adjust this path if you are using a different dataset, e.g., data/mask_pems08.npy)
 ```
-###Step 5: Run
+### Step 5: Run
 You can now run the patched training script (train.py, which is now your train_A.py).
 
 ```Bash
